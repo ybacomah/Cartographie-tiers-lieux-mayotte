@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartographie Interactive</title>
+    <!-- Ajout des liens vers les fichiers CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.1/dist/MarkerCluster.Default.css" />
+    <style>
+        /* Styles pour la carte et la boîte d'information */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        #map {
+            height: 80%;
+            width: 50%;
+            float: left; /* Ajout du style float pour aligner la carte à gauche */
+        }
+
+        
+
+        #horaires {
+            float: right; /* Ajout du style float pour aligner les horaires à droite */
+        }
+		
+		h1#titreCarto {
+			text-align: center;
+			font-weight: bold; 
+			color: darkblue;
+			text-decoration: underline;
+        }
+		
+		h2#titreContact {
+			color: darkred;
+        }
+		
+		h2#titreHoraires {
+            text-align: right; /* Aligne le titre "Horaires d'ouverture" à droite */
+			color: #0911B2;
+        }
+
+    </style>
+    <!-- Ajout du script de Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Ajout du script de Leaflet.markercluster -->
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.1/dist/leaflet.markercluster.js"></script>
+</head>
+<body>
+    <h1 id="titreCarto" >CARTOGRAPHIE TIERS-LIEUX REGION MAYOTTE</h1>
+	<p></p>
+    <h2 id="titreContact">Contact organisme</h2>
+    <div id="boiteinfo"></div>
+	<h2 id="titreHoraires">Horaires d'ouverture</h2>
+	<div id="horaires"></div>
+    <div id="map"></div>
+	
+    <!-- Ajout de votre script JavaScript -->
+    <script src="cartographie.js"></script>
+</body>
+</html>
