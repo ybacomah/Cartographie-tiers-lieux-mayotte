@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const lieuxtIcon = L.icon({
         iconUrl: './data/Lieux.png',
-        iconSize: [25, 25]
+        iconSize: [35, 35]
     });
     
 
