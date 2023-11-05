@@ -7,11 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
         maxZoom: 19,
     }).addTo(mymap);
 
-	const lieuxtIcon = L.icon({
-    iconUrl: './data/Lieux.png',
-    iconSize: [25, 25]
-	});
-
     // Création d'un groupe de clusters de marqueurs
     var markers = L.markerClusterGroup();
 
@@ -274,7 +269,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     espacesNumeriques.forEach(function(esp) {
         // Création d'un marqueur pour chaque espace numérique
-        var marqueur = L.marker([esp.Latitude, esp.Longitude], { icon: lieuxtIcon })
+        var marqueur = L.marker([esp.Latitude, esp.Longitude])
             .bindPopup(
                 `Animateur : ${esp["Prénom animateur"]} ${esp["Nom animateur"]}<br>` +
                 `Téléphone : ${esp.Téléphone}<br>` +
